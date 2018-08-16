@@ -36,7 +36,7 @@ services:
       # sender email address
       GF_SMTP_FROM_NAME:
       # sender email name. defaults to Grafana
-      GF_SMTP_EHLO_IDENTITY
+      GF_SMTP_EHLO_IDENTITY:
       # Name to be used as client identity for EHLO in SMTP dialog, defaults to instance_name.
       TZ:
       # 4 ex: Europe/Rome
