@@ -21,6 +21,7 @@ services:
       - /srv/data/docker/containers/influxdb-grafana-app/grafana/data:/var/lib/grafana
     environment:
       GF_SECURITY_ADMIN_PASSWORD:
+      GF_SECURITY_ADMIN_USER:
       TZ:
       # 4 ex: Europe/Rome
     depends_on:
