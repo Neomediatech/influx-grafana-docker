@@ -28,6 +28,16 @@ services:
     environment:
       GF_SECURITY_ADMIN_PASSWORD:
       GF_SECURITY_ADMIN_USER:
+      GF_SMTP_ENABLED:
+      # true/false
+      GF_SMTP_HOST:
+      # smtp server to use. ex: 192.168.1.1:25
+      GF_SMTP_FROM_ADDRESS:
+      # sender email address
+      GF_SMTP_FROM_NAME:
+      # sender email name. defaults to Grafana
+      GF_SMTP_EHLO_IDENTITY
+      # Name to be used as client identity for EHLO in SMTP dialog, defaults to instance_name.
       TZ:
       # 4 ex: Europe/Rome
     depends_on:
