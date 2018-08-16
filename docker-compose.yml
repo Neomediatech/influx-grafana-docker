@@ -17,6 +17,8 @@ services:
       INFLUXDB_ADMIN_PASSWORD:
       INFLUXDB_GRAPHITE_ENABLED:
       # true/false
+      INFLUXDB_GRAPHITE_DATABASE:
+      # default database name
       TZ:
       # 4 ex: Europe/Rome
 
