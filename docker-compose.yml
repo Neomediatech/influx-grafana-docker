@@ -3,6 +3,8 @@ version: '3.4'
 services:
   influxdb:
     image: influxdb:alpine
+    ports:
+      - 8086:8086
     volumes:
       - /srv/data/docker/containers/influxdb-grafana-app/influxdb/data:/var/lib/influxdb
     environment:
@@ -19,6 +21,8 @@ services:
     image: grafana/grafana
     ports:
       - 3000:3000
+      - 2003:2003
+      # graphite support
     volumes:
       - /srv/data/docker/containers/influxdb-grafana-app/grafana/data:/var/lib/grafana
     environment:
