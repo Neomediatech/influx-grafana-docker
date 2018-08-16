@@ -6,10 +6,12 @@ services:
     volumes:
       - /srv/data/docker/containers/influxdb-grafana-app/influxdb/data:/var/lib/influxdb
     environment:
-      INFLUXDB_ADMIN_ENABLED:true
+      INFLUXDB_ADMIN_ENABLED:
+      # yes/no
       INFLUXDB_ADMIN_USER:
       INFLUXDB_ADMIN_PASSWORD:
-      TZ:Europe/Rome
+      TZ:
+      # 4 ex: Europe/Rome
 
   grafana:
     image: grafana/grafana
@@ -19,6 +21,7 @@ services:
       - /srv/data/docker/containers/influxdb-grafana-app/grafana/data:/var/lib/grafana
     environment:
       GF_SECURITY_ADMIN_PASSWORD:
-      TZ:Europe/Rome
+      TZ:
+      # 4 ex: Europe/Rome
     depends_on:
       - infuxdb
