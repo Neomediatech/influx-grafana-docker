@@ -19,6 +19,12 @@ services:
       # true/false
       INFLUXDB_GRAPHITE_DATABASE:
       # default database name
+      INFLUXDB_OPENTSDB_ENABLED:
+      # true/false
+      INFLUXDB_OPENTSDB_BIND_ADDRESS:
+      # default ":4242"
+      INFLUXDB_OPENTSDB_DATABASE:
+      # database name
       TZ:
       # 4 ex: Europe/Rome
     sysctls:
