@@ -28,8 +28,8 @@ services:
       # database name
       TZ:
       # 4 ex: Europe/Rome
-    sysctls:
-      net.ipv6.conf.all.disable_ipv6: 1
+    #sysctls:
+    #  net.ipv6.conf.all.disable_ipv6: 1
 
   grafana:
     image: grafana/grafana
@@ -52,7 +52,7 @@ services:
       # Name to be used as client identity for EHLO in SMTP dialog, defaults to instance_name.
       TZ:
       # 4 ex: Europe/Rome
-    sysctls:
-      net.ipv6.conf.all.disable_ipv6: 1      
+    #sysctls:
+    #  net.ipv6.conf.all.disable_ipv6: 1      
     depends_on:
       - infuxdb
