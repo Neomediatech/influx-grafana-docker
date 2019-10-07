@@ -2,6 +2,7 @@ version: '3.4'
 
 services:
   influxdb:
+    hostname: influxdb
     image: influxdb:alpine
     ports:
       - 8086:8086
@@ -56,3 +57,13 @@ services:
     #  net.ipv6.conf.all.disable_ipv6: 1      
     depends_on:
       - infuxdb
+
+  chronograf:
+    image: chronograf:alpine
+    environment:
+      INFLUXDB_URL: http://influxdb:8086
+    ports:
+      - "8888:8888"
+    depends_on:
+      - infuxdb
+
