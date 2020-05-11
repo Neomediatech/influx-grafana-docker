@@ -66,6 +66,8 @@ services:
       INFLUXDB_URL: http://influxdb:8086
     ports:
       - "8888:8888"
+    volumes:
+      - chronograf_db:/var/lib/chronograf
     depends_on:
       - infuxdb
 
@@ -75,7 +77,12 @@ services:
     environment:
       KAPACITOR_HOSTNAME: kapacitor
       KAPACITOR_INFLUXDB_0_URLS_0: http://influxdb:8086
+    volumes:
+      - kapacitor_db:/var/lib/kapacitor
     depends_on:
       - infuxdb
     ports:
       - "9092:9092"
+volumes:
+  chronograf_db:
+  kapacitor_db:
