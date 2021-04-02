@@ -2,7 +2,7 @@ version: '3.4'
 
 services:
   influxdb:
-    image: influxdb:alpine
+    image: influxdb:1.8-alpine
     hostname: influxdb
     ports:
       - 8086:8086
@@ -29,7 +29,6 @@ services:
       # database name
       TZ:
       # 4 ex: Europe/Rome
-      DOCKER_INFLUXDB_INIT_MODE:
     #sysctls:
     #  net.ipv6.conf.all.disable_ipv6: 1
 
